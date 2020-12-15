@@ -12,15 +12,25 @@ public class Participant
     private String nom;
     private Voiture voitureChoisie;
     ArrayList<Voiture> voitures;
+    private String numTel;
+    private String id="";
+    private int titre = 0;
 
-  
     public Participant()
     {
         nom = "inconu";
+  
         voitureChoisie = null;
         voitures = new ArrayList<Voiture>();
     }
-
+    public Participant(String nom, String numTel)
+    {
+        this.nom = nom;
+        this.numTel = numTel;
+        voitureChoisie = null;
+        voitures = new ArrayList<Voiture>();
+        setId(this.nom+this.numTel); 
+    }
 
        public String getNom()
     {
@@ -51,4 +61,25 @@ public class Participant
     	this.voitures.add(v);
     	v.setProprietaire(this);
     }
+    
+    
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getNumTel() {
+		return numTel;
+	}	
+	public void setNumTel(String numTel) {
+		this.numTel = numTel;
+	}
+	public int getTitre() {
+		return titre;
+	}
+	public void setTitre(int titre) {
+		this.titre = titre;
+	}
 }

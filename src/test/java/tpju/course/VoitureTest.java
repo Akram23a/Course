@@ -61,6 +61,8 @@ public class VoitureTest
         assertEquals(p.getVoiture().getModele(), v.getModele());
     }
     
+
+    
     @Test
     public void testListeVoitures() {
     	Voiture v3 = new  Voiture("mod1",220);
@@ -80,6 +82,11 @@ public class VoitureTest
         assertEquals(v, v);
         v.equals(new Voiture("Donald", 230));
         assertTrue(v.equals(v));
+    }
+    
+    @Test
+    public void testSupresssionParticipant() {
+    	
     }
     
   
