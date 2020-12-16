@@ -9,7 +9,9 @@ public class Course {
 	public Participant gagnant=null;
 
     public Course() {
-    	
+    	setVoitures(new  ArrayList<Voiture>());
+    	participants = new ArrayList<Participant>();
+
     	
     }
     
