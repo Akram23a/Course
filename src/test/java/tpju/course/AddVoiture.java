@@ -6,24 +6,24 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;  
 import cucumber.api.java.en.When;  
 
-public class AddVoi {
-      Participant p;
+public class AddVoiture {
+      Conducteur p;
       Voiture v;
       
 	  @Given("^Un participant \"([^\"]*)\" qui s enregistre$")
 	  public void participant_senregistre(String nom) {
-		  p=new Participant();
+		  p=new Conducteur();
 		  p.setNom(nom);
 	  }
 	  @When("^Il s attribue la voiture avec le nom \"([^\"]*)\" et la vitesse \"([^\"]*)\"$")
-	  public void une_voiture_est_enregistree(String nom, String vitesse) {
-	      v = new Voiture();
-		  v.setModele(nom);
+	  public void une_voiture_est_enregistree(String nom1, String vitesse) {
+		  v=new Voiture();
+		  v.setModele(nom1);
 	      v.setVitesseMax(Integer.parseInt(vitesse));
 	      p.addVoiture(v);
 	  }
 	  @Then("Verifier si elle est affectee")
-	  public void verif_depasse_vitesse() {
+	  public void verif_affectee() {
 	      assertTrue(p.getVoitures().contains(v));
 	  }
 }

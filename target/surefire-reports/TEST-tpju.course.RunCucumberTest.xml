@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="tpju.course.RunCucumberTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="tpju.course.RunCucumberTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.1+9-18"/>
@@ -55,6 +55,12 @@
     <property name="sun.cpu.endian" value="little"/>
   </properties>
   <testcase classname="Verifier ajout voiture" name="verfication addvoiture" time="0.004"/>
+  <testcase classname="Verifier ajout voiture" name="verfication addvoiture" time="0"/>
   <testcase classname="Verifier la validite de la vitesse de la voiture" name="Comparaison de la vitesse de la voiture enregistree a la vitesse maximale definie" time="0"/>
+  <testcase classname="Verifier la validite de la vitesse de la voiture" name="Comparaison de la vitesse de la voiture enregistree a la vitesse maximale definie" time="0.001"/>
   <testcase classname="Verifier la validite de la vitesse de la voiture" name="Comparaison de la vitesse de la voiture enregistree a la vitesse maximale definie" time="0"/>
+  <testcase classname="moto subscription" name="subscribe a non existing moto" time="0.001"/>
+  <testcase classname="moto subscription" name="unsubscribe an existing moto" time="0"/>
+  <testcase classname="rider subscription" name="subscribe a non existing rider" time="0"/>
+  <testcase classname="rider subscription" name="unsubscribe an existing rider" time="0"/>
 </testsuite>

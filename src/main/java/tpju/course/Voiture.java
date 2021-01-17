@@ -1,18 +1,25 @@
 package tpju.course;
 
+import java.util.ArrayList;
+
 //import junit.framework.TestCase;
 
 /**
  * Classe Voiture
  *
- * @author Akram, Ayoub
+ * @author Akram
  * @version 2.0
  */
-public class Voiture
+public class Voiture extends Vehicule
 {
     private String modele;
     private int vitesseMax; 
-    private Participant proprietaire;
+    private Conducteur proprietaire;
+
+    public ArrayList<Voiture> voituresPlusRapides;
+    
+    
+    
     /**
      * Constructeur d'objets de classe Voiture
      */
@@ -27,9 +34,10 @@ public class Voiture
         this.modele = nom;
         this.vitesseMax = vit;
         this.proprietaire = null;
+        voituresPlusRapides = new ArrayList<Voiture>();
     }
     /**
-     * Un exemple de méthode - remplacez ce commentaire par le vôtre
+     * 
      *
      * @return     les informations de la voiture
      */
@@ -38,10 +46,14 @@ public class Voiture
         return "Modele : "+this.modele+
                 " Vitesse maximale : "+this.vitesseMax; 
     }
+    
+    public void addVoiturePlusRapide(Voiture v) {
+    	voituresPlusRapides.add(v);
+    }
   
     public boolean depasseVitesse(int vitesse)
     {
-        if(this.vitesseMax >= vitesse)
+        if(this.vitesseMax <= vitesse)
             return true;
         else
             return false;
@@ -78,7 +90,7 @@ public class Voiture
     {
         this.vitesseMax = newVitesseMax;
     }
-    public void setProprietaire(Participant newProp)
+    public void setProprietaire(Conducteur newProp)
     {
         this.proprietaire = newProp;
         newProp.setVoitureChoisie(this);
@@ -88,10 +100,10 @@ public class Voiture
     {
         return this.proprietaire;
     }
-    public static void main ( String [] args) {
-    	
-    	
-    	
+    public String getstr()
+    {
+        return " , Model : " + this.modele + "Owner " + proprietaire.getNom();
     }
+   
     
 }

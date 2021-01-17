@@ -9,8 +9,8 @@ import cucumber.api.java.en.When;
 public class Desistement {
 	
     Voiture v;
-    Participant p;
-    Course c;
+    Conducteur p;
+    CourseVoiture c;
     int AncienNbTitre;
 
     @Given("Un enregistrement comprend la course concernant le desistement")

@@ -22,6 +22,6 @@ public class DepasseVitesse {
     }
     @Then("^Verifier si elle depasse la vitesse \"([^\"]*)\"$")
     public void verif_depasse_vitesse(String c) {
-        assertTrue(!testV.depasseVitesse(Integer.parseInt(c)));
+        assertTrue(testV.depasseVitesse(Integer.parseInt(c)));
     }
 }

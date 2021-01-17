@@ -9,16 +9,16 @@ import cucumber.api.java.en.When;
 public class GagneTitre {
 	
     Voiture v1;
-    Participant p1;
-    Course c1;
+    Conducteur p1;
+    CourseVoiture c1;
     int AncienNbTitre;
 
 
     @Given("un enrgesitrement d une course et participant et nombre de titres")
     public void enregistre_participant_et_voiture() {
     	 v1 = new Voiture();
-    	 c1 = new Course();
-    	 p1= new Participant();
+    	 c1 = new CourseVoiture();
+    	 p1= new Conducteur();
     	  v1.setModele("Audi A7");
           v1.setVitesseMax(260);
 

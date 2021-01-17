@@ -1,5 +1,7 @@
-tpju/course/AddVoi.class
-tpju/course/Desistement.class
-tpju/course/GagneTitre.class
+tpju/course/AddVoiture.class
 tpju/course/RunCucumberTest.class
 tpju/course/DepasseVitesse.class
+tpju/course/StepDefinitions1.class
+tpju/course/Desistement.class
+tpju/course/GagneTitre.class
+tpju/course/StepDefinitions2.class

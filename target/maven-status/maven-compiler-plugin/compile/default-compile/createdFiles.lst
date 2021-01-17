@@ -1,4 +1,7 @@
+tpju/course/Course.class
+tpju/course/Rider.class
 tpju/course/Participant.class
 tpju/course/Voiture.class
-tpju/course/Course.class
+tpju/course/RefactoringMotoTest.class
 tpju/course/Organisateur.class
+tpju/course/Moto.class
