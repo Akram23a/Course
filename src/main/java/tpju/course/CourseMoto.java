@@ -2,25 +2,17 @@ package tpju.course;
 
 import java.util.ArrayList;
 
-import tpju.course.CourseVoiture.VoitureIterator;
-
-public class CourseMoto{
+public class CourseMoto implements Course{
 	
 	public Organisateur org;
     private ArrayList<Moto> motos;
     private ArrayList<Rider> riders;
-	public Rider gagnant=null;
+	public Participant gagnant=null;
 
-    public CourseMoto() {
-    	setMotos(new  ArrayList<Moto>());
-    	riders = new ArrayList<Rider>();
-
-    	
-    }
     
-    public CourseMoto(Organisateur org) {
-    	this.setOrg(Organisateur.getInstance());
-    	setMotos(new  ArrayList<Moto>());
+    public CourseMoto() {
+    	this.org = Organisateur.getInstance();
+    	motos = new  ArrayList<Moto>();
     	riders = new ArrayList<Rider>();
     }
     
@@ -70,7 +62,7 @@ public class CourseMoto{
     		}
     }
     
-    public void gagnant(Rider P) {
+    public void gagnant(Participant P) {
     	this.gagnant=P;
     	P.setTitres(P.getTitres()+1);
     }
@@ -101,11 +93,26 @@ public class CourseMoto{
 	public String getstr() {
 		String s= "";
 		int i=0;
-		for( Rider c: riders) {
+		for( Participant c: riders) {
 			i++;
-			s+=i+":  "+c.getFullname();
+			s+=i+":  "+c.getNom();
 		}
 		return s;
 	}
+
+	public void startRace() {
+		// TODO Auto-generated method stub
+
+		System.out.print("Car race started");
+	}
+
+	public void endRace() {
+		// TODO Auto-generated method stub
+
+		System.out.print("Car race finished");
+	}
+
+
+
 
 }

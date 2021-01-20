@@ -19,10 +19,8 @@ public class Desistement {
         v.setVitesseMax(260);
 
         p.setNom("Thomas");
-        p.setVoitureChoisie(v);
         
         c.ajouterPartcipant(p);
-        
         
         
     }

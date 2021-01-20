@@ -23,7 +23,6 @@ public class GagneTitre {
           v1.setVitesseMax(260);
 
           p1.setNom("Thomas");
-          p1.setVoitureChoisie(v1);
           
           c1.ajouterPartcipant(p1);
           
@@ -33,12 +32,12 @@ public class GagneTitre {
     }
     @When("le participant p gagne la course c")
     public void gagne_course() {
-      	AncienNbTitre = p1.getTitre();
+      	AncienNbTitre = p1.getTitres();
         c1.gagnant(p1);
 
     }
     @Then("verifier l'incrementation des tritres de p")
     public void titre_attribue() {        
-        assertTrue(AncienNbTitre+1 == p1.getTitre());
+        assertTrue(AncienNbTitre+1 == p1.getTitres());
     }
 }

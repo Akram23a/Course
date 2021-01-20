@@ -1,10 +1,13 @@
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/CourseVoiture.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Vehicule.java
-/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Rider.java
-/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Item.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Conducteur.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Organisateur.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Course.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Participant.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Voiture.java
 /Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Moto.java
-/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/RefactoringMotoTest.java
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/CourseMoto.java
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Rider.java
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/DemoPattern.java
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/Iterator.java
+/Users/mac/Desktop/mavenversion/course/src/main/java/tpju/course/CourseFactory.java

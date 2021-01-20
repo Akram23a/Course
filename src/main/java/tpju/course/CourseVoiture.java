@@ -2,7 +2,7 @@ package tpju.course;
 
 import java.util.ArrayList;
 
-public class CourseVoiture{
+public class CourseVoiture implements Course{
 	
 	public Organisateur org;
     private ArrayList<Voiture> voitures;
@@ -10,6 +10,8 @@ public class CourseVoiture{
 	public Participant gagnant=null;
 
     public CourseVoiture() {
+    	this.setOrg(Organisateur.getInstance());
+		System.out.print("Race initialized");
     	setVoitures(new  ArrayList<Voiture>());
     	conducteurs = new ArrayList<Conducteur>();
     }
@@ -59,7 +61,7 @@ public class CourseVoiture{
     		conducteurs.add(p);
     }
     
-    public void enleverParticipant(Participant p) {
+    public void enleverParticipant(Conducteur p) {
     	for(int i = 0 ; i < conducteurs.size(); i++)
     		if(conducteurs.get(i).getId().equals(p.getId())){
     			conducteurs.remove(i);
@@ -67,9 +69,9 @@ public class CourseVoiture{
     		}
     }
     
-    public void gagnant(Participant P) {
+    public void gagnant(Conducteur P) {
     	this.gagnant=P;
-    	P.setTitre(P.getTitre()+1);
+    	P.setTitres(P.getTitres()+1);
     }
 	public Organisateur getOrg() {
 		return org;
@@ -103,6 +105,16 @@ public class CourseVoiture{
 			s+=i+":  "+c.getNom();
 		}
 		return s;
+	}
+
+
+	public void startRace() {
+		System.out.print("Car race started");
+		
+	}
+
+	public void endRace() {
+		System.out.print("Car race finished");
 	}
 
 }

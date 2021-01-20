@@ -1,29 +1,33 @@
 package tpju.course;
 
+import java.util.ArrayList;
+
 public class DemoPattern {
 	public static void main(String[] args) {
+		
 		Voiture v1= new Voiture("voiture1",190);
 		Voiture v2= new Voiture("voiture2",195);
 		Voiture v3= new Voiture("voiture3",180);
 		Voiture v4= new Voiture("voiture4",185);
 		
-		v3.addVoiturePlusRapide(v1);
-		v3.addVoiturePlusRapide(v2);
-		v3.addVoiturePlusRapide(v4);
+		v3.addVehiculePlusRapide(v1);
+		v3.addVehiculePlusRapide(v2);
+		v3.addVehiculePlusRapide(v4);
 		
-		v4.addVoiturePlusRapide(v1);
-		v4.addVoiturePlusRapide(v2);
+		v4.addVehiculePlusRapide(v1);
+		v4.addVehiculePlusRapide(v2);
 		
-		v1.addVoiturePlusRapide(v2);
+		v1.addVehiculePlusRapide(v2);
 
 		System.out.println("les voitures les plus rapides que v3 sont");
-		for(Voiture v: v3.voituresPlusRapides) {
+		for(Vehicule v: v3.getVehiculesPlusRapides()) {
 			System.out.println(v.getModele());
 		}
 		
-	
 		
-		CourseVoiture courseVoiture = new CourseVoiture();
+		CourseFactory factory= new CourseFactory();
+		
+		CourseVoiture courseVoiture = (CourseVoiture) factory.getCourse("voiture");
 		
 		courseVoiture.addVoitures(v1);
 		courseVoiture.addVoitures(v3);
@@ -38,9 +42,9 @@ public class DemoPattern {
         
         
         
-        Moto m1= new Moto("Moto1","model1");
-        Moto m2= new Moto("Moto2","model2");
-		Moto m3= new Moto("Moto3","model3");
+        Moto m1= new Moto("Model1",100);
+        Moto m2= new Moto("Model2",100);
+        Moto m3= new Moto("Model3",100);
 		
 		
         CourseMoto courseMoto = new CourseMoto();
@@ -50,9 +54,16 @@ public class DemoPattern {
 		courseMoto.addMoto(m2);
 		
         for(Iterator iter = courseMoto.getIterator(); iter.hasNext();){
-    	   Moto v = (Moto) iter.next();
-           System.out.println("Name : " + v.getBrand());
+    	   Vehicule v = (Vehicule) iter.next();
+           System.out.println("Name : " + v.getModele());
         }
+        
+ 
+        
+        
 	}
+	
+	
+	
 
 }

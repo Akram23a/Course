@@ -18,15 +18,15 @@ public class StepDefinitions1 {
     }
 
     @Given("^moto brand is : \"([^\"]*)\"$")
-    public void moto_brand_is(String brand) {
+    public void moto_brand_is(String modele) {
         this.moto = new Moto();
-        this.moto.setBrand(brand);
+        this.moto.setModele(modele);
     }
 
     @Given("^moto model is : \"([^\"]*)\"$")
     public void moto_model_is(String model) {
         this.moto = new Moto();
-        this.moto.setModel(model);
+        this.moto.setModele(model);
     }
 
     @When("^moto does not already exist on the db$")

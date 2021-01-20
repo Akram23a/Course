@@ -20,7 +20,7 @@ public class StepDefinitions2 {
     @Given("^rider fullname is : \"([^\"]*)\"$")
     public void rider_fullname_is(String fullname) {
         this.rider = new Rider();
-        this.rider.setFullname(fullname);
+        this.rider.setNom(fullname);
     }
 
     @When("^rider does not already exist on the db$")
@@ -40,7 +40,7 @@ public class StepDefinitions2 {
     @Given("^existing rider fullname is : \"([^\"]*)\"$")
     public void existing_rider_fullname_is(String fullname) {
         this.rider = new Rider();
-        this.rider.setFullname(fullname);
+        this.rider.setNom(fullname);
     }
 
     @When("^rider does exist on the db$")

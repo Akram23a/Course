@@ -17,13 +17,13 @@ public class AddVoiture {
 	  }
 	  @When("^Il s attribue la voiture avec le nom \"([^\"]*)\" et la vitesse \"([^\"]*)\"$")
 	  public void une_voiture_est_enregistree(String nom1, String vitesse) {
-		  v=new Voiture();
+		  v=new Voiture(nom1,Integer.parseInt(vitesse));
 		  v.setModele(nom1);
 	      v.setVitesseMax(Integer.parseInt(vitesse));
-	      p.addVoiture(v);
+	      p.addVehicule(v);
 	  }
 	  @Then("Verifier si elle est affectee")
 	  public void verif_affectee() {
-	      assertTrue(p.getVoitures().contains(v));
+	      assertTrue(p.getVehicule().contains(v));
 	  }
 }
