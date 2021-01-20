@@ -24,7 +24,7 @@ public class DemoPattern {
 			System.out.println(v.getModele());
 		}
 		
-		
+		// Factory use
 		CourseFactory factory= new CourseFactory();
 		
 		CourseVoiture courseVoiture = (CourseVoiture) factory.getCourse("voiture");
@@ -33,7 +33,7 @@ public class DemoPattern {
 		courseVoiture.addVoitures(v3);
 		courseVoiture.addVoitures(v2);
 		
-		
+		// Iterator use
         for(Iterator iter = courseVoiture.getIterator(); iter.hasNext();){
     	   Voiture v = (Voiture) iter.next();
            System.out.println("Name : " + v.getModele());
@@ -45,7 +45,9 @@ public class DemoPattern {
         Moto m1= new Moto("Model1",100);
         Moto m2= new Moto("Model2",100);
         Moto m3= new Moto("Model3",100);
-		
+		courseVoiture.startRace();
+		courseVoiture.endRace();
+
 		
         CourseMoto courseMoto = new CourseMoto();
 		

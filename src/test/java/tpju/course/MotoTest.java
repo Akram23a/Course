@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 import java.util.ArrayList;
 
-public class StepDefinitions1 {
+public class MotoTest {
 
     private ArrayList<Moto> motos = new ArrayList<Moto>();
     Moto moto = new Moto();

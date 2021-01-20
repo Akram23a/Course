@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import java.util.ArrayList;
 
-public class StepDefinitions2 {
+public class RiderTest {
 
     private ArrayList<Rider> riders = new ArrayList<Rider>();
     Rider rider = new Rider();
