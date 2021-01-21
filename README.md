@@ -5,7 +5,7 @@
 
 - Digram Course before fusion:
 
-![](course akr.png)
+![](courseAkr.png)
 
 - Digram Moto before fusion:
 
